@@ -21,11 +21,12 @@ const handleClick = () => {
 };
   return (
     <FullCont isDark = {mode===Moon} >
+      
       <Header isDark ={mode === Moon}>
         <p> GithubUserInfo</p>
         <span onClick={handleClick}> {dark} <img src={mode}/> </span>
       </Header>
-      <Search isDark={mode === Moon}/>
+      <Search isDark={mode === Moon}> </Search>
     </FullCont>
   );
 }
@@ -37,11 +38,25 @@ const FullCont = styled.div`
 /* background-color:#F6F8FF; */
 background-color: ${(props) => (props.isDark ? "#F6F8FF" : "#141D2F")};
 padding:24px;
-height:100vh;`
+height:100vh;
+display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+`
 
+
+  
 const Header = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
   color: ${(props) => (props.isDark ? "#1E2A47" : "#F6F8FF")};
+  width: 327px;
+  @media (min-width: 800px) {
+    width: 730px;
+    left: 0px;
+    top: 0px;
+    border-radius: 15px;
+    
 `

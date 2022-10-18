@@ -40,7 +40,7 @@ function Card({ name, setName, isDark }) {
       <PicAndInfo isDark={isDark}>
         <img src={user.avatar_url} alt="avatar" />
         <div>
-          <p>{user.name}</p>
+          <h1>{user.name}</h1>
           <p> @{user.login}</p>
           <span>
             Joined {createdAt && createdAt[2]}{" "}
@@ -107,7 +107,6 @@ export default Card;
 
 const MainCard = styled.div`
   height: 517px;
-
   left: 0px;
   top: 0px;
   border-radius: 15px;
@@ -116,6 +115,20 @@ const MainCard = styled.div`
   box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.198567);
   border-radius: 15px;
   padding: 32px 24px;
+  font-size: 18px;
+
+  @media (min-width: 800px) {
+    height: 444px;
+    width: 730px;
+    left: 0px;
+    top: 0px;
+    border-radius: 15px;
+    padding: 48px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
 
   img {
     height: 70px;
@@ -123,6 +136,13 @@ const MainCard = styled.div`
     left: 24px;
     top: 32px;
     border-radius: 45px;
+    @media (min-width: 800px) {
+      height: 117px;
+      width: 117px;
+      left: 40px;
+      top: 40px;
+      border-radius: 60px;
+    }
   }
 `;
 const PicAndInfo = styled.div`
@@ -152,6 +172,10 @@ const Followers = styled.div`
     display: flex;
     align-items: center;
     flex-direction: column;
+  }
+  @media (min-width: 800px) {
+    width: 100%;
+    gap: 50px;
   }
 `;
 

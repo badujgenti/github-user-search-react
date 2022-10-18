@@ -42,6 +42,9 @@ const MainDiv = styled.form`
   box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.198567);
   background-color: ${(props) => (props.isDark ? "#FFFFFF" : "#1E2A47")};
   border-radius: 20px;
+  @media (min-width: 800px) {
+    width: 730px;
+  }
 `;
 
 const Lupe = styled.img`
@@ -55,6 +58,10 @@ const TextInput = styled.input`
   outline: none;
   background-color: ${(props) => (props.isDark ? "#FFFFFF" : "#1E2A47")};
   color: ${(props) => (props.isDark ? "#1E2A47" : "#F6F8FF")};
+  @media (min-width: 800px) {
+    margin-right: auto;
+    width: 100%;
+  }
 `;
 
 const Submit = styled.button`
